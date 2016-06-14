@@ -4,9 +4,17 @@
 /* Pega a quantidade de números */
 int quantidade(int N)
 {
-	printf("Insira a quantidade de numeros: ");
-	scanf("%d", &N);
-	return N;
+	do
+	{
+		printf("Insira a quantidade de numeros: ");
+		scanf("%d", &N);
+		
+		if(N <= 0)
+			printf("Erro. Insira apenas inteiros maiores que zero. \n\n");
+			
+		else
+			return N;	
+	} while (N <= 0);
 }
 
 /* Insere os números desejados no vetor */
